@@ -1,8 +1,8 @@
 plugins {
     id "idea"
     id "groovy"
-    id "com.energizedwork.webdriver-binaries" version "1.4"
-    id "com.energizedwork.idea-base" version "1.4"
+    id "com.github.erdi.webdriver-binaries" version "2.2"
+    id "com.github.erdi.idea-base" version "2.2"
 }
 
 ext {
@@ -10,10 +10,10 @@ ext {
     drivers = ["firefox", "chrome", "chromeHeadless"]
 
     ext {
-        gebVersion = '3.2'
+        gebVersion = '3.4'
         seleniumVersion = '3.14.0'
-        chromeDriverVersion = '77.0.3865.40'
-        geckoDriverVersion = '0.24.0'
+        chromeDriverVersion = '79.0.3945.36'
+        geckoDriverVersion = '0.26.0'
     }
 }
 
@@ -37,7 +37,10 @@ dependencies {
 }
 
 webdriverBinaries {
-    chromedriver chromeDriverVersion
+    chromedriver {
+        version = chromeDriverVersion
+        fallbackTo32Bit = true
+    }
     geckodriver geckoDriverVersion
 }
 
