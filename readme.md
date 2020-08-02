@@ -21,6 +21,9 @@ To run with all, you can run:
 
 Replace `./gradlew` with `gradlew.bat` in the above examples if you're on Windows.
 
+## webdriver binaies urls
+https://chromedriver.storage.googleapis.com/
+
 ## Questions and issues
 
 Please ask questions on [Geb user mailing list][mailing_list] and raise issues in [Geb issue tracker][issue_tracker].
